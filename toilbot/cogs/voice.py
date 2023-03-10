@@ -89,6 +89,7 @@ class Voice(commands.Cog):
 		for mp3 in self.listdir():
 			output += mp3 + ", "
 		output = output[:-2]
+		output.sort()
 		await ctx.send(output)
 
 	@commands.Cog.listener()
